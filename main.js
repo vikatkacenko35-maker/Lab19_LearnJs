@@ -58,3 +58,52 @@ for (let i = 1; i <=4; i++){
         console.log("*".repeat(i));
     }
 }
+
+function sum(a, b){
+    return a + b;
+}
+console.log(sum(3,5));
+
+function multiply(a, b){
+    return a * b;
+}
+console.log(multiply(3,4));
+
+function printinfo(namr, age){
+    console.log("Имя:", namr);
+    console.log("Влзварст:", age);
+}
+
+function greet(name = "Гость"){
+    console.log("Hi, " + name);
+}
+greet();
+greet("ананстасия");
+
+function calculateDiscount(cost, percent = 10){
+    return cost += cost * (percent / 100)
+}
+
+//Пример замыканий (closure):
+
+function ex1(){
+    let c = 0;
+    return function(){
+        c++; //функция помнит с
+        return c;
+    };
+}
+const c = ex1;
+console.log(c());//1
+console.log(c());//2
+console.log(c());//3
+
+//Стрелочные функции (Arrow Functions)
+
+const sumf2 = (a,b) => a+b;
+const sayHi = () => console.log("Hiii!!");
+//Один параметр — скобки необязательны:
+//Несколько параметров — скобки обязательны:
+//Нет параметров — пустые скобки
+//Одна строка — return неявный:
+const sq = x => x*x; // return automatic
