@@ -74,10 +74,10 @@
 //     console.log("Влзварст:", age);
 // }
 
-// function greet(name = "Гость"){
-//     console.log("Hi, " + name);
-// }
-// greet();
+function greet(name = "Гость"){
+     console.log("Hi, " + name);
+}
+greet();
 // greet("ананстасия");
 
 // function calculateDiscount(cost, percent = 10){
@@ -144,3 +144,55 @@ for (let value of students){
 
 let city = ["a", "b", "f"];
 console.log(city.indexOf("f"))
+
+//Создание объекта (object literal)
+
+let user = {
+    name:"Bjujd",
+    age: 90,
+    sis: false,
+};
+console.log(user)
+console.log(user.age);
+console.log(user["name"]);
+
+let book= {
+    title:"dffd",
+    author:"pushkin",
+    year:1890,
+};
+console.log(book.title);
+console.log(book.author);
+console.log(book.year);
+book.year = 1989;
+console.log(book.year);
+// Добавление и удаление свойств
+delete book.author;
+//user.greet();
+
+let car = {
+    brand: "roytrts",
+    year: 844,
+    getInfo: function(){
+        console.log(this.brand, this.year);
+    },
+};
+function getInfo(df, dfd){
+    console.log("Brand: ", df);
+    console.log("Year: ", dfd);
+
+}
+car.getInfo();
+
+for (let y in car){
+    console.log(y + ":" + car[y]);
+}
+
+let product = {
+    stoimost: 52,
+    ves: 67,
+    god: 777,
+};
+for (let yh in product){
+    console.log(yh + ":" + product[yh]);
+}
