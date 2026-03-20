@@ -196,3 +196,4 @@ let product = {
 for (let yh in product){
     console.log(yh + ":" + product[yh]);
 }
+//Финальный коммит (после всех шагов)
